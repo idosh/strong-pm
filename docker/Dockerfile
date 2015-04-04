@@ -1,4 +1,4 @@
-FROM nodesource/trusty:iojs-1.5.1
+FROM nodesource/trusty:iojs-1.6.2
 
 RUN apt-get update && apt-get install -y git
 
