@@ -1,6 +1,10 @@
 FROM nodesource/trusty:iojs-1.6.2
 
-RUN apt-get update && apt-get install -y git
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && apt-get install -y git software-properties-common
+RUN	add-apt-repository ppa:mc3man/trusty-media && \
+	apt-get update && apt-get install -y ffmpeg
 
 # Ensure git is installed (used by strong-pm)
 # Create "strong-pm" user
